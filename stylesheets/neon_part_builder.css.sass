@@ -1,0 +1,81 @@
+.popover, .modal
+  h3
+    color: #bf0022
+
+.builder 
+  top: 0
+  padding: 10px 10px 20px
+  margin-bottom: 50px
+  overflow: hidden
+  background-color: #ffffff
+  border-radius: 0 0 8px 8px
+  -webkit-transition: box-shadow .2s
+  .layers
+    float: left
+  .part
+    float: left
+    text-align: center
+    width: 600px
+    margin: 30px 0 0
+  &.affix
+    width: 900px
+    box-shadow: 0 0px 20px rgba(0,0,0,0.2)
+    -webkit-transition: box-shadow .2s
+
+#part-number 
+  margin: 0 0 20px
+  padding: 0
+  list-style: none
+  background-color: #ffffff
+  font-family: 'Ubuntu Mono', monospace
+  font-size: 39px
+  overflow: hidden
+  line-height: 2
+  li 
+    display: inline
+    padding: 0.3em 0.1em
+    border: 1px solid transparent
+    border-radius: 3px
+    &.separator 
+      padding: 0.3em 0
+    &.selected 
+      background-color: #FFE0DF
+      border-color: #cc0000
+  span.separator 
+    padding: 0.3em 0.2em
+    &:first-child 
+      padding-left: 0
+    
+.options 
+  margin-bottom: 40px
+  h4
+    margin-top: 20px
+
+.affix 
+  position: fixed
+
+ul.flow 
+  overflow: hidden
+  li 
+    display: block
+    float: left
+    width: 81px
+    height: 81px
+
+ul.no-input 
+  input 
+    display: none
+  li 
+    border: 1px solid transparent
+    border-radius: 3px
+    padding: 5px
+    &:hover 
+      background-color: #eeeeee
+    &.selected 
+      background-color: #FFE0DF
+      border-color: #cc0000
+  label 
+    padding: 0
+    cursor: pointer
+  img
+    width: 81px

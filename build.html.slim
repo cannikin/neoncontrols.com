@@ -1,0 +1,774 @@
+script(type="text/javascript" src="/javascripts/neon_part_builder.js")
+link(type="text/css" rel="stylesheet" href="/stylesheets/neon_part_builder.css")
+.neon
+  .page-header
+    h1 Build Your Regulator
+    p.lead 
+      | With 117,573,120 possible combinations, chances are we can 
+      | build exactly what you need from the choices below. Pick your options, 
+      | build your regulator and then click the "Get a Quote" button to send a 
+      | note to sales. We'll get back to you ASAP.
+
+  #builder.builder
+    .layers
+      img(id="layer1" src="/images/series85.png")
+      /img(id="layer1" src="/images/builder/series85/layer1-group15-valueB.png")
+      /img(id="layer2" src="/images/builder/series85/layer2-group3-value3.png")
+      /img(id="layer3" src="/images/builder/series85/layer3-group7-value1.png")
+      /img(id="layer4" src="/images/builder/series85/layer4-group11-value2.png")
+      /img(id="layer5" src="/images/builder/series85/layer5-group16-value15.png")
+    .part
+      ul#part-number.unstyled
+        li#part-group2(data-group="2") 0
+        li.separator -
+        li#part-group3(data-group="3") 0
+        li#part-group4(data-group="4") 0
+        li#part-group5(data-group="5") 0
+        li#part-group6(data-group="6") 0
+        li#part-group7(data-group="7") 0
+        li.separator -
+        li#part-group8(data-group="8") 0
+        li#part-group9(data-group="9") 0
+        li#part-group10(data-group="10") 0
+        li#part-group11(data-group="11") 0
+        span#second-stage-part(style="display:none")
+          li.separator -
+          li#part-group12(data-group="12") 0
+          li#part-group13(data-group="13") 0
+          li#part-group14(data-group="14") 0
+          li#part-group15(data-group="15") 0
+        li.separator -
+        li#part-group16(data-group="16") 0
+      a(href="#get-quote-modal" role="button" class="btn btn-primary btn-large" data-toggle="modal") Get a Quote
+
+  #builder-placeholder(style="display:none")
+
+  #options
+    .row
+      .span4
+        h4 Series
+        ul#group-2.unstyled(data-group="2")
+          li
+            label(class="radio")
+              input(id="series-10" type="radio" name="option-2" value="10" checked="checked")
+              a(href="#" rel="popover" title="Series 10 Single Stage Reducing Regulator" data-content="The Series 10, single stage regulator, offers precise pressure control for gas or liquid service. Excellent downstream stability is maintained by its metal diaphragm assembly.<img src='/images/series10-diagram.png'>") Single Stage Reducing
+          li
+            label(class="radio")
+              input(id="series-12" type="radio" name="option-2" value="12")
+              a(href="#" rel="popover" title="Series 12 Back Pressure Regulator" data-content="The Series 12 back pressure regulator is identical in size to our Series 10 pressure reducing regulator. Its sensitive metal diaphragm assembly and Cv of .3 affords steady upstream control of pressure from low to moderate flow applications even with fluctuating flow conditions.<img src='/images/series12-diagram.png'>") Back Pressure
+          li
+            label(class="radio")
+              input(id="series-15" type="radio" name="option-2" value="15")
+              a(href="#" rel="popover" title="Series 15 Single Stage Cylinder Regulator" data-content="The Series 15 single stage regulator is gas cylinder ready. Complete with customer specified inlet and outlet pressure gauges and cga connector. These components are supplied in the same material as the regulator body.<img src='/images/series15-diagram.png'>") Single Stage Cylinder
+          li
+            label(class="radio")
+              input(id="series-85" type="radio" name="option-2" value="85" data-second-stage="true")
+              a(href="#" rel="popover" title="Series 85 Two Stage Cylinder Regulator" data-content="The Series 85 two stage regulator is gas cylinder ready. Complete with customer specified inlet and outlet pressure gauges and cga connector. These components are supplied in the same material as the regulator body.<img src='/images/series85-diagram.png'>") Two Stage Cylinder
+          /
+            li
+              label(class="radio")
+                input(type="radio" name="option-2" value="440")
+                a(href="#" rel="popover" title="Series 440 Crossover Manifold" data-content="The Series 440 semi automatic changeover is gas cylinder ready. It uses two Series 15 regulators built into one body functioning as the lower changeover regulator. The design has a common outlet port that feeds the connected Series 10 line regulator. The line regulator provides constant delivery supply pressure to a process unaffected by source depletion or switchover.<img src='/images/series440-diagram.png'>") Crossover Manifold
+
+      .span4
+        h4 Body Material
+        ul#group-3.unstyled(data-group="3" data-layer="2")
+          li
+            label(class="radio")
+              input(type="radio" name="option-3" value="1") 
+              | Brass
+          li
+            label(class="radio")
+              input(type="radio" name="option-3" value="2" checked="checked") 
+              | 316L Stainless Steel
+          li
+            label class="radio"
+              input(type="radio" name="option-3" value="3") 
+              | Monel&reg;
+          li
+            label(class="radio")
+              input(type="radio" name="option-3" value="4") 
+              | Hastelloy&reg;
+          li
+            label class="radio"
+              input(type="radio" name="option-3" value="5") 
+              | Titanium
+          li
+            label(class="radio")
+              input(type="radio" name="option-3" value="6") 
+              | Chrome Brass
+
+      .span4
+        h4 Control Range
+        ul#group-4.unstyled(data-group="4")
+          li
+            label(class="radio")
+              input(type="radio" name="option-4" value="1") 
+              | 0-10 psig
+          li
+            label(class="radio")
+              input(type="radio" name="option-4" value="2") 
+              | 0-25 psig
+          li
+            label(class="radio")
+              input(type="radio" name="option-4" value="3") 
+              | 0-50 psig
+          li
+            label(class="radio")
+              input(type="radio" name="option-4" value="4" checked="checked") 
+              | 0-100 psig
+          li
+            label(class="radio")
+              input(type="radio" name="option-4" value="5") 
+              | 0-250 psig
+          li
+            label(class="radio")
+              input(type="radio" name="option-4" value="6") 
+              | 0-500 psig
+          li
+            label(class="radio")
+              input(type="radio" name="option-4" value="7") 
+              | 0-750 psig
+          li(data-toggle-group="2" data-toggle-value="10,12,15,440")
+            label(class="radio")
+              input(type="radio" name="option-4" value="8") 
+              | 0-1000 psig
+    
+    hr
+
+    h4 Port Configuration
+    ul#group-5.unstyled.flow.no-input(data-group="5")
+      li
+        label(class="radio")
+          input(type="radio" name="option-5" value="1") 
+          img(src="/images/port_config-a.png")
+      li(data-toggle-group="2" data-toggle-value="10,15,85,440")
+        label(class="radio")
+          input(type="radio" name="option-5" value="2")
+          img(src="/images/port_config-b.png")
+      li(data-toggle-group="2" data-toggle-value="10,15,85,440")
+        label(class="radio")
+          input(type="radio" name="option-5" value="3") 
+          img(src="/images/port_config-c.png")
+      li(data-toggle-group="2" data-toggle-value="12")
+        label(class="radio")
+          input(type="radio" name="option-5" value="2") 
+          img(src="/images/port_config-d.png")
+      li(data-toggle-group="2" data-toggle-value="10,15,85,440")
+        label(class="radio")
+          input(type="radio" name="option-5" value="4")
+          img(src="/images/port_config-e.png")
+      li(data-toggle-group="2" data-toggle-value="10,15,85,440")
+        label(class="radio")
+          input(type="radio" name="option-5" value="5" checked="checked") 
+          img(src="/images/port_config-f.png")
+      li(data-toggle-group="2" data-toggle-value="12")
+        label(class="radio")
+          input(type="radio" name="option-5" value="3") 
+          img(src="/images/port_config-g.png")
+      li(data-toggle-group="2" data-toggle-value="10,15,85,440")
+        label(class="radio")
+          input(type="radio" name="option-5" value="6")
+          img(src="/images/port_config-h.png")
+      li(data-toggle-group="2" data-toggle-value="10,15,85,440")
+        label(class="radio")
+          input(type="radio" name="option-5" value="7") 
+          img(src="/images/port_config-i.png")
+      li(data-toggle-group="2" data-toggle-value="10,15,85,440")
+        label(class="radio")
+          input(type="radio" name="option-5" value="8")
+          img(src="/images/port_config-k.png")
+      li(data-toggle-group="2" data-toggle-value="10,15,85,440")
+        label(class="radio")
+          input(type="radio" name="option-5" value="9")
+          img(src="/images/port_config-l.png")
+      li(data-toggle-group="2" data-toggle-value="12")
+        label(class="radio")
+          input(type="radio" name="option-5" value="9") 
+          img(src="/images/port_config-v.png")
+      li(data-toggle-group="2" data-toggle-value="10,15,85,440")
+        label(class="radio")
+          input(type="radio" name="option-5" value="X")
+          img(src="/images/port_config-x.png")
+
+    hr
+
+    h4 Connection Size
+    .row
+      .span4
+        ul#group-6.unstyled(data-group="6")
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="A") 
+              | 1/8" FNPT
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="B") 
+              | 1/4" FNPT
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="C") 
+              | 3/8" FNPT
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="D" checked="checked") 
+              | 1/2" FNPT
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="E") 
+              | 1/8" Tube
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="F") 
+              | 1/4" Tube
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="G") 
+              | 3/8" Tube
+
+      .span4
+        ul.unstyled(data-group="6")
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="H") 
+              | 6mm Tube
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="I") 
+              | 1/8" Hose Barb
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="J") 
+              | 3/16" Hose Barb
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="K") 
+              | 1/4" Hose Barb
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="L") 
+              | 1/4" NPTM x Male Metal Seal
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="M") 
+              | 1/4" NPTM x Female Metal Seal
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="N") 
+              | 3/8" 1/4" MNPT x F Adapter
+
+      .span4
+        ul.unstyled(data-group="6")
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="O") 
+              | 1/2" 1/4" MNPT x F Adapter
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="P") 
+              | 1/4" Male Hex Nipple
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="Q") 
+              | 1/2" Tube Compression Fitting
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="R") 
+              | 5/8" Tube Compression Fitting
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="S") 
+              | MS Threads
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="T") 
+              | AN Threads
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="U") 
+              | SAE Threads
+          li
+            label(class="radio")
+              input(type="radio" name="option-6" value="V") 
+              | Welded
+
+    hr
+
+    .row
+      .span3
+        h4 Gauges
+        ul#group-7.unstyled(data-group="7" data-layer="3")
+          li
+            label(class="radio")
+              input(type="radio" name="option-7" value="1" checked="checked") 
+              | With Gauges
+          li
+            label(class="radio")
+              input(type="radio" name="option-7" value="2") 
+              | Without Gauges
+          li
+            label(class="radio")
+              input(type="radio" name="option-7" value="3") 
+              | Customer-supplied gauges
+
+      .span3
+        h4 Flow Coefficient
+        ul#group-8.unstyled(data-group="8")
+          li(data-toggle-group="2" data-toggle-value="10,15,85")
+            label(class="radio")
+              input(type="radio" name="option-8" value="1") 
+              | 0.025 Cv
+          li(data-toggle-group="2" data-toggle-value="10,15,85")
+            label(class="radio")
+              input(type="radio" name="option-8" value="2") 
+              | 0.07 Cv
+          li(data-toggle-group="2" data-toggle-value="10,15,85")
+            label(class="radio")
+              input(type="radio" name="option-8" value="3" checked="checked") 
+              | 0.24 Cv
+          li
+            label(class="radio")
+              input(type="radio" name="option-8" value="4") 
+              | 0.3 Cv
+          li(data-toggle-group="2" data-toggle-value="12")
+            label(class="radio")
+              input(type="radio" name="option-8" value="5") 
+              | 0.46 Cv
+    
+      .span3
+        h4 Diaphragm
+        ul#group-9.unstyled(data-group="9" data-second-stage="true")
+          li
+            label(class="radio")
+              input(type="radio" name="option-9" value="A" checked="checked") 
+              | 316L w/ Tezel Ring
+          li
+            label(class="radio")
+              input(type="radio" name="option-9" value="B") 
+              | 302 w/ Teflon Shield
+          li
+            label(class="radio")
+              input(type="radio" name="option-9" value="C") 
+              | 316L w/ Teflon Shield
+
+      .span3
+        h4 Seat Material
+        ul#group-10.unstyled(data-group="10" data-second-stage="true")
+          li(data-toggle-group="2" data-toggle-value="12")
+            label(class="radio")
+              input(type="radio" name="option-10" value="E" checked="checked") 
+              | EPDM
+          li
+            label(class="radio")
+              input(type="radio" name="option-10" value="C") 
+              | CFT
+          li
+            label(class="radio")
+              input(type="radio" name="option-10" value="F") 
+              | Kel-F
+          li(data-toggle-group="2" data-toggle-value="10,15,85")
+            label(class="radio")
+              input(type="radio" name="option-10" value="P") 
+              | PEEK
+          li
+            label(class="radio")
+              input(type="radio" name="option-10" value="P") 
+              | Vespel
+          li
+            label(class="radio")
+              input(type="radio" name="option-10" value="P") 
+              | Teflon
+          li(data-toggle-group="2" data-toggle-value="12")
+            label(class="radio")
+              input(type="radio" name="option-10" value="V") 
+              | Viton
+          li
+            label(class="radio")
+              input(type="radio" name="option-10" value="Z") 
+              | Tefzel
+
+    hr
+
+    h4 Cap and Knob
+    .row
+      .span4
+        h5 Metal Knob
+        ul#group-11.unstyled(data-group="11" data-layer="4" data-second-stage="true")
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="1") 
+              | Chrome Aluminum Std
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="2" checked="checked") 
+              | 302 Stainless Steel Std
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="3") 
+              | Black Anodized Aluminum
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="4") 
+              | Chrome Aluminum PM
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="5") 
+              | 302 Stainless Steel PM
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="6") 
+              | Black Anodized Aluminum PM
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="7") 
+              | Chrome Aluminum Dome Loaded
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="8") 
+              | Chrome AL CV
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="9") 
+              | Chrome AL CV PM
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="0") 
+              | Chrome AL Non Vented
+
+      .span4
+        h5 Tamper Proof
+        ul.unstyled(data-group="11" data-layer="4" data-second-stage="true")
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="A") 
+              | Chrome Aluminum Std
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="B") 
+              | 302 Stainless Steel Std
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="C") 
+              | Black Anodized Aluminum
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="D") 
+              | Chrome Aluminum PM
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="E") 
+              | 302 Stainless Steel PM
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="F") 
+              | Black Anodized Aluminum PM
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="G") 
+              | Chrome Aluminum Dome Loaded
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="H") 
+              | Chrome AL CV
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="J") 
+              | Chrome AL CV PM
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="K") 
+              | Chrome AL Non Vented
+
+      .span4
+        h5 No Knob
+        ul.unstyled(data-group="11" data-layer="4" data-second-stage="true")
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="L") 
+              | Chrome Aluminum Dome Loaded
+          li
+            label(class="radio")
+              input(type="radio" name="option-11" value="M") 
+              | Chrome Aluminum Dome Loaded PM
+
+
+    / start second stage
+    #second-stage(style="display:none")
+      hr
+      h3 Second Stage
+      .row
+        .span3
+          h4 Flow Coefficient
+          ul#group-12.unstyled(data-group="12")
+            li(data-toggle-group="2" data-toggle-value="10,15,85")
+              label(class="radio")
+                input(type="radio" name="option-12" value="1") 
+                | 0.025 Cv
+            li
+              label(class="radio")
+                input(type="radio" name="option-12" value="2") 
+                | 0.07 Cv
+            li
+              label(class="radio")
+                input(type="radio" name="option-12" value="3" checked="checked") 
+                | 0.24 Cv
+            li
+              label(class="radio")
+                input(type="radio" name="option-12" value="4") 
+                | 0.3 Cv
+            li(data-toggle-group="2" data-toggle-value="12")
+              label(class="radio")
+                input(type="radio" name="option-12" value="5") 
+                | 0.46 Cv
+            li
+              label(class="radio")
+                input(type="radio" name="option-12" value="6") 
+                | 1.0 Cv
+      
+        .span3
+          h4 Diaphragm
+          ul#group-13.unstyled(data-group="13" data-second-stage="true")
+            li
+              label(class="radio")
+                input(type="radio" name="option-13" value="A" checked="checked") 
+                | 316L w/ Tezel Ring
+            li
+              label(class="radio")
+                input(type="radio" name="option-13" value="B") 
+                | 302 w/ Teflon Shield
+            li
+              label(class="radio")
+                input(type="radio" name="option-13" value="C") 
+                | 316L w/ Teflon Shield
+
+        .span3
+          h4 Seat Material
+          ul#group-14.unstyled(data-group="14" data-second-stage="true")
+            li(data-toggle-group="2" data-toggle-value="12")
+              label(class="radio")
+                input(type="radio" name="option-14" value="E") 
+                | EPDM
+            li
+              label(class="radio")
+                input(type="radio" name="option-14" value="C" checked="checked") 
+                | CFT
+            li
+              label(class="radio")
+                input(type="radio" name="option-14" value="F") 
+                | Kel-F
+            li
+              label(class="radio")
+                input(type="radio" name="option-14" value="P") 
+                | Vespel
+            li
+              label(class="radio")
+                input(type="radio" name="option-14" value="T") 
+                | Teflon
+            li(data-toggle-group="2" data-toggle-value="12")
+              label(class="radio")
+                input(type="radio" name="option-14" value="V") 
+                | Viton
+            li
+              label(class="radio")
+                input(type="radio" name="option-14" value="Z") 
+                | Tefzel
+
+      hr
+
+      h4 Cap and Knob
+      .row
+        .span4
+          h5 Metal Knob
+          ul#group-15.unstyled(data-group="15" data-layer="1" data-second-stage="true")
+            li
+              label(class="radio")
+                input(type="radio" name="option-15" value="1") 
+                | Chrome Aluminum Std
+            li
+              label(class="radio")
+                input(type="radio" name="option-15" value="2") 
+                | 302 Stainless Steel Std
+            li
+              label(class="radio")
+                input(type="radio" name="option-15" value="3") 
+                | Black Anodized Aluminum
+            li
+              label(class="radio")
+                input(type="radio" name="option-15" value="4") 
+                | Chrome Aluminum PM
+            li
+              label(class="radio")
+                input(type="radio" name="option-15" value="5") 
+                | 302 Stainless Steel PM
+            li
+              label(class="radio")
+                input(type="radio" name="option-15" value="6") 
+                | Black Anodized Aluminum PM
+            li
+              label(class="radio")
+                input(type="radio" name="option-15" value="7") 
+                | Chrome Aluminum Dome Loaded
+            li
+              label(class="radio")
+                input(type="radio" name="option-15" value="8") 
+                | Chrome Aluminum CV
+            li
+              label(class="radio")
+                input(type="radio" name="option-15" value="9") 
+                | Chrome Aluminum CV PM
+            li
+              label(class="radio")
+                input(type="radio" name="option-15" value="0") 
+                | Chrome Aluminum Non Vented
+
+        .span4
+          h5 Tamper Proof
+          ul.unstyled(data-group="15" data-layer="1" data-second-stage="true")
+            li
+              label(class="radio")
+                input(type="radio" name="option-15" value="A") 
+                | Chrome Aluminum Std
+            li
+              label(class="radio")
+                input(type="radio" name="option-15" value="B" checked="checked") 
+                | 302 Stainless Steel Std
+            li
+              label(class="radio")
+                input(type="radio" name="option-15" value="C") 
+                | Black Anodized Aluminum
+            li
+              label(class="radio")
+                input(type="radio" name="option-15" value="D") 
+                | Chrome Aluminum PM
+            li
+              label(class="radio")
+                input(type="radio" name="option-15" value="E") 
+                | 302 Stainless Steel PM
+            li
+              label(class="radio")
+                input(type="radio" name="option-15" value="F") 
+                | Black Anodized Aluminum PM
+            li
+              label(class="radio")
+                input(type="radio" name="option-15" value="G") 
+                | Chrome Aluminum Dome Loaded
+            li
+              label(class="radio")
+                input(type="radio" name="option-15" value="H") 
+                | Chrome Aluminum CV
+            li
+              label(class="radio")
+                input(type="radio" name="option-15" value="J") 
+                | Chrome Aluminum CV PM
+            li
+              label(class="radio")
+                input(type="radio" name="option-15" value="K") 
+                | Chrome Aluminum Non Vented
+
+        .span4
+          h5 No Knob
+          ul.unstyled(data-group="15" data-layer="1" data-second-stage="true")
+            li
+              label(class="radio")
+                input(type="radio" name="option-11" value="L") 
+                | Chrome Aluminum Dome Loaded
+            li
+              label(class="radio")
+                input(type="radio" name="option-11" value="M") 
+                | Chrome Aluminum Dome Loaded PM
+
+    / end second stage
+
+    hr
+
+    h4 Options
+    p You can choose a maximum of two options
+    .row
+      .span4
+        ul#group-16.unstyled(data-group="16" data-layer="5" data-max="2")
+          li
+            label(class="checkbox")
+              input(type="checkbox" name="option-16" value="04") 
+              | Relief Valve
+          li
+            label(class="checkbox")
+              input(type="checkbox" name="option-16" value="07") 
+              | Elastomer Diaphragm
+          li
+            label(class="checkbox")
+              input(type="checkbox" name="option-16" value="15" checked="checked") 
+              | Outlet Valve - Packed
+          li
+            label(class="checkbox")
+              input(type="checkbox" name="option-16" value="16") 
+              | Outlet Valve - Packless
+          li
+            label(class="checkbox")
+              input(type="checkbox" name="option-16" value="20") 
+              | High Temp Service
+          li
+            label(class="checkbox")
+              input(type="checkbox" name="option-16" value="21") 
+              | 16 RMS Diaphragm Cavity
+          li
+            label(class="checkbox")
+              input(type="checkbox" name="option-16" value="22") 
+              | 8 RMS Diaphragm Cavity
+
+      .span4
+        ul.unstyled(data-group="16" data-max="2")
+          li
+            label(class="checkbox")
+              input(type="checkbox" name="option-16" value="28") 
+              | Ni-Span C Range Spring
+          li
+            label(class="checkbox")
+              input(type="checkbox" name="option-16" value="33") 
+              | Monel Internals
+          li
+            label(class="checkbox")
+              input(type="checkbox" name="option-16" value="40") 
+              | Hastelloy C Internals
+          li
+            label(class="checkbox")
+              input(type="checkbox" name="option-16" value="43") 
+              | Linked Poppet-Diaphragm
+          li
+            label(class="checkbox")
+              input(type="checkbox" name="option-16" value="44") 
+              | 5 &micro; inlet filter
+          li
+            label(class="checkbox")
+              input(type="checkbox" name="option-16" value="45") 
+              | T-Purge Multi Turn
+          li
+            label(class="checkbox")
+              input(type="checkbox" name="option-16" value="46") 
+              | T-Purge Quarter Turn
+
+      .span4
+        ul.unstyled(data-group="16" data-max="2")
+          li
+            label(class="checkbox")
+              input(type="checkbox" name="option-16" value="47") 
+              | Bottom Ported
+          li
+            label(class="checkbox")
+              input(type="checkbox" name="option-16" value="51") 
+              | Check Valve
+          li
+            label(class="checkbox")
+              input(type="checkbox" name="option-16" value="57") 
+              | 180&deg; Preset Adjustment
+          li
+            label(class="checkbox")
+              input(type="checkbox" name="option-16" value="62") 
+              | T Filter
+          li
+            label(class="checkbox")
+              input(type="checkbox" name="option-16" value="66") 
+              | Fluted Metal Knob (Blue)
+          li
+            label(class="checkbox")
+              input(type="checkbox" name="option-16" value="67") 
+              | Fluted Metal Knob (Black)
